@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+span{
+  font-family: arial,sans-serif;
+  font-size: 30px;
+}
+.google-logo {
+  width: 272px;
+  height: 92px;
+  position: absolute;
+  left: 50%;
+  margin-left: -136px;
+}
+
+.img-magnifier {
+  width: 27px;
+  height: 27px;
+  background-size: 100%;
+  background-image: url("../assets/放大镜图标.png");
+}
+
+#search {
+  width: 440px;
+  height: 40px;
+  border: none; /*取消默认的边框以设置自定义边框*/
+  outline: none; /*取消浏览器默认的蓝光边框以设置自定义的输入框*/
+  font-size: 16px;
+  color: rgb(112, 112, 112);
+  margin-left: 30px;
+  position: absolute;
+}
+
+.searchbar { /*目的是设置自定义边框，比如圆角与阴影*/
+  border: rgb(218, 218, 218) solid 1px;
+  border-radius: 2em;
+  width: 583px;
+  height: 44px;
+  //box-shadow: 0px 0px 5px rgb(212, 212, 212);
+  margin: 0 auto;
+}
+.searchbar:hover{
+  box-shadow: 0 0 5px rgb(212, 212, 212);
+}
+
+.search-form {
+  //background-color: red;
+}
+
+.img-microphone {
+  width: 27px;
+  height: 27px;
+  background-size: 100%;
+  background-image: url("../assets/麦克风图标.png");
+}
+
+.bt-search {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  font-family: arial,sans-serif;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transform: translate(558px, 386px);
+}
+.bt-search:hover{
+  box-shadow: 0 0 5px rgb(212, 212, 212);
+}
+
+
+.foot{
+  font-size: 12px;
+  margin-top: 40px;
+  color: #999;
+}
