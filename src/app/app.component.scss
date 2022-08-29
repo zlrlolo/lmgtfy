@@ -3,36 +3,33 @@
   padding: 0;
 }
 
-span{
-  font-family: arial,sans-serif;
-  font-size: 30px;
+//标题区域
+.logo {
+  height: 300px;
+  display: block;
+  //background-color: pink;
+  margin: 20px auto;
+  text-align: center;
 }
+.text {
+  display: inline-block;
+  font-family: arial, sans-serif;
+  font-size: 30px;
+  margin: 0 12px;
+  transform: translate(0, -30px);
+}
+
 .google-logo {
+  //background-color: red;
+  display: inline;
   width: 272px;
   height: 92px;
-  position: absolute;
   left: 50%;
-  margin-left: -136px;
+  margin-top: 200px;
+  text-align: center;
 }
 
-.img-magnifier {
-  width: 27px;
-  height: 27px;
-  background-size: 100%;
-  background-image: url("../assets/放大镜图标.png");
-}
-
-#search {
-  width: 440px;
-  height: 40px;
-  border: none; /*取消默认的边框以设置自定义边框*/
-  outline: none; /*取消浏览器默认的蓝光边框以设置自定义的输入框*/
-  font-size: 16px;
-  color: rgb(112, 112, 112);
-  margin-left: 30px;
-  position: absolute;
-}
-
+//搜索条
 .searchbar { /*目的是设置自定义边框，比如圆角与阴影*/
   border: rgb(218, 218, 218) solid 1px;
   border-radius: 2em;
@@ -40,13 +37,21 @@ span{
   height: 44px;
   //box-shadow: 0px 0px 5px rgb(212, 212, 212);
   margin: 0 auto;
+  display: flex;
+  text-align: center;
 }
-.searchbar:hover{
+
+.searchbar:hover {
   box-shadow: 0 0 5px rgb(212, 212, 212);
 }
 
-.search-form {
-  //background-color: red;
+.img-magnifier {
+  width: 27px;
+  height: 27px;
+  background-size: 100%;
+  background-image: url("../assets/放大镜图标.png");
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .img-microphone {
@@ -54,6 +59,28 @@ span{
   height: 27px;
   background-size: 100%;
   background-image: url("../assets/麦克风图标.png");
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#search {
+  width: 500px;
+  height: 40px;
+  border: none; /*取消默认的边框以设置自定义边框*/
+  outline: none; /*取消浏览器默认的蓝光边框以设置自定义的输入框*/
+  font-size: 16px;
+  color: rgb(112, 112, 112);
+  //margin-left: 30px;
+  //background-color: red;
+  margin-top: 2px;
+}
+
+
+//搜索按钮
+.bt {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center
 }
 
 .bt-search {
@@ -61,25 +88,60 @@ span{
   border: 1px solid #f8f9fa;
   border-radius: 4px;
   color: #3c4043;
-  font-family: arial,sans-serif;
+  font-family: arial, sans-serif;
   font-size: 14px;
-  margin: 11px 4px;
+  margin: 10px 20px;
   padding: 0 16px;
   line-height: 27px;
   height: 36px;
   min-width: 54px;
-  text-align: center;
   cursor: pointer;
   user-select: none;
-  transform: translate(558px, 386px);
 }
-.bt-search:hover{
+
+.bt-search:hover {
   box-shadow: 0 0 5px rgb(212, 212, 212);
 }
 
 
-.foot{
+//问题区
+.question {
+  width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  display: block;
+}
+
+.center{
+  //display: none;
+  margin-top: 50px;
+}
+.dialogue{
+  display: block;
+  margin: 0;
+  color: gray;
+}
+.link{
+  height: 30px;
+  background-color:gainsboro;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  border: 1px solid rgb(218, 218, 218);
+}
+
+//底线
+
+.foot {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  //background-color: pink;
+  width: 100%;
+}
+
+span {
   font-size: 12px;
-  margin-top: 40px;
   color: #999;
+  margin: 0 auto;
 }

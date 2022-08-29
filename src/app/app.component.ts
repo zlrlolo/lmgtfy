@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lmgtfy';
+  searchval: any;
+  newlink: string = '';
+  active = 0;
+  newsearch: any;
+  animationOn=1;
+
+  sharelink() {
+    const url = new URL("https://google.com");
+    url.searchParams.set('q', this.searchval)
+    this.newlink = url.href;
+    this.active = 1;
+    this.newsearch = this.newlink
+  }
 }
+
+
+
