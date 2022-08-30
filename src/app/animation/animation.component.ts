@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AnimationComponent implements OnInit {
 
   constructor() { }
-
+  userSearch="搜索内容";
   ngOnInit(): void {
 
   }

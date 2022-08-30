@@ -1,31 +1,31 @@
-<router-outlet></router-outlet>
+<!--<router-outlet></router-outlet>-->
 
 <div class="logo">
-  <div class="text" *ngIf="animationOn">让我帮你</div>
+  <div class="text" *ngIf="animationOn" [ngClass]="{'text-success':again}">让我帮你</div>
   <img alt="google" src="../assets/googlelogo_color_272x92dp.png" class="google-logo">
-  <div class="text" *ngIf="animationOn">你要的东西</div>
+  <div class="text" *ngIf="animationOn" [ngClass]="{'text-success':again}">你要的东西</div>
 </div>
 
 
-<div class="searchbar">
+<div class="searchbar" [ngClass]="{'searchbarTouch':searchbarTouch}">
   <div class="img-magnifier"></div>
-  <input type="text" name='val' [(ngModel)]="searchval"  id="search">
+  <input type="text" name='val' [(ngModel)]="searchval" id="search" autofocus>
   <div class="img-microphone"></div>
 </div>
 
 <div class="bt">
-  <button class="bt-search" (click)="sharelink()">Google 搜索</button>
+  <button class="bt-search" (click)="sharelink()" [ngClass]="{'btSearchtouch':btSearchtouch}">Google 搜索</button>
   <button class="bt-search">手气不错</button>
 </div>
 
 
 <div class="question">
-  <mat-card-title class="dialogue">写下你的问题，点击一个按钮</mat-card-title>
+  <mat-card-title class="dialogue" >{{card}}</mat-card-title>
 </div>
 
 
 <div class="center" *ngIf="active">
-  <input matInput type="text" class="link" name="newsearch" [(ngModel)]="newsearch">
+  <input type="text" class="link" name="newsearch" [(ngModel)]="newsearch">
 
   <div class="bt">
     <button mat-stroked-button class="bt-search">分享</button>
@@ -33,6 +33,11 @@
   </div>
 </div>
 
+<div [ngClass]="{
+'mouseDispaly':again,
+'mouseMove1':mousemove1,
+'mouseMove2':mousemove2}"
+     id="" ></div>
 
 <div class="foot">
   <span>Google® 是 Google Inc 的注册商标，本产品和 Google® 没有任何联系</span>
