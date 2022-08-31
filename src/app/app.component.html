@@ -6,7 +6,7 @@
   <div class="text" *ngIf="animationOn" [ngClass]="{'text-success':again}">你要的东西</div>
 </div>
 
-
+<form (submit)="sharelink()">
 <div class="searchbar" [ngClass]="{'searchbarTouch':searchbarTouch}">
   <div class="img-magnifier"></div>
   <input type="text" name='val' [(ngModel)]="searchval" id="search" autofocus>
@@ -14,10 +14,10 @@
 </div>
 
 <div class="bt">
-  <button class="bt-search" (click)="sharelink()" [ngClass]="{'btSearchtouch':btSearchtouch}">Google 搜索</button>
+  <button class="bt-search" type="submit" [ngClass]="{'btSearchtouch':btSearchtouch}">Google 搜索</button>
   <button class="bt-search">手气不错</button>
 </div>
-
+</form>
 
 <div class="question">
   <mat-card-title class="dialogue" >{{card}}</mat-card-title>
@@ -25,11 +25,11 @@
 
 
 <div class="center" *ngIf="active">
-  <input type="text" class="link" name="newsearch" [(ngModel)]="newsearch">
+  <input type="text" class="link" name="newsearch" [(ngModel)]="newsearch" #link>
 
   <div class="bt">
-    <button mat-stroked-button class="bt-search">分享</button>
-    <button mat-stroked-button class="bt-search">复制</button>
+<!--    <button mat-stroked-button class="bt-search">分享</button>-->
+    <button mat-stroked-button class="bt-search" (click)="copyToClip()">复制</button>
   </div>
 </div>
 
@@ -42,3 +42,5 @@
 <div class="foot">
   <span>Google® 是 Google Inc 的注册商标，本产品和 Google® 没有任何联系</span>
 </div>
+
+<!--<button type="button" class="copy" >复制</button>-->
