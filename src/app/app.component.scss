@@ -11,6 +11,7 @@
   margin: 20px auto;
   text-align: center;
 }
+
 .text {
   display: inline-block;
   font-family: arial, sans-serif;
@@ -112,30 +113,33 @@
   display: block;
 }
 
-.center{
+.center {
   //display: none;
   margin-top: 50px;
 }
-.dialogue{
+
+.dialogue {
   display: block;
   margin: 0;
-  color: rgb(60,63,65);
+  color: rgb(60, 63, 65);
 }
-.link{
+
+.link {
   height: 30px;
-  background-color:gainsboro;
+  background-color: gainsboro;
   display: block;
   margin: 0 auto;
   border-radius: 4px;
   border: 1px solid rgb(218, 218, 218);
 }
-.btSearchtouch{
+
+.btSearchtouch {
   box-shadow: 0 0 5px rgb(212, 212, 212);
 }
 
 //鼠标和鼠标动画
 
-.mouseDispaly{
+.mouseDispaly {
   display: block;
   background-image: url("../assets/鼠标.png");
   height: 40px;
@@ -148,12 +152,14 @@
   top: 0;
   left: 0;
 }
-.mouseMove1{
+
+.mouseMove1 {
   animation-name: mouseMove1;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
-.mouseMove2{
+
+.mouseMove2 {
   animation-name: mouseMove2;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -169,6 +175,7 @@
     margin-top: 380px;
   }
 }
+
 @keyframes mouseMove2 {
   0% {
     left: 40%;
@@ -197,11 +204,62 @@ span {
 }
 
 
-
 //变化项
-.text-success{
+.text-success {
   display: none;
 }
-.searchbarTouch{
+
+.searchbarTouch {
   box-shadow: 0 0 5px rgb(212, 212, 212);
 }
+
+
+//适配
+@media screen and (orientation: portrait) {
+  /*竖屏 css*/
+  #text1 {
+    transform: translate(0, 27vw);
+  }
+
+  #text2 {
+    transform: translate(0, -16vw);
+  }
+
+  .google-logo {
+    transform: translate(0, -16vw);
+  }
+
+  .searchbar{
+    width:80vw ;
+  }
+  #search {
+    width: 58vw;
+    margin-left: 2vw;
+  }
+
+  @keyframes mouseMove2 {
+    0% {
+      left: 40%;
+      margin-top: 380px;
+    }
+    100% {
+      left: 40%;
+      margin-top: 440px;
+    }
+  }
+
+
+}
+
+//.backpack {
+//  transform: translate(-25vw, 70vw) scale(2);
+//}
+//.ice_bt{
+//  margin: 0;
+//}
+//.message {
+//  font-size: 1vw;
+//  transform: translate(30vw, 53vw) scale(2.5);
+//}
+
+

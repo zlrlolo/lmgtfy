@@ -1,9 +1,9 @@
 <!--<router-outlet></router-outlet>-->
 
 <div class="logo">
-  <div class="text" *ngIf="animationOn" [ngClass]="{'text-success':again}">让我帮你</div>
+  <div class="text" *ngIf="animationOn" [ngClass]="{'text-success':again}" id="text1">让我帮你</div>
   <img alt="google" src="../assets/googlelogo_color_272x92dp.png" class="google-logo">
-  <div class="text" *ngIf="animationOn" [ngClass]="{'text-success':again}">你要的东西</div>
+  <div class="text" *ngIf="animationOn" [ngClass]="{'text-success':again}" id="text2">你要的东西</div>
 </div>
 
 <form (submit)="sharelink()">
