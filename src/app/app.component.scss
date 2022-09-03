@@ -5,103 +5,112 @@
 
 //标题区域
 .logo {
-  height: 300px;
   display: block;
   //background-color: pink;
-  margin: 20px auto;
+  margin: 10px auto;
   text-align: center;
 }
 
 .text {
   display: inline-block;
   font-family: arial, sans-serif;
-  font-size: 30px;
-  margin: 0 12px;
-  transform: translate(0, -30px);
+  font-size: 25px;
+  margin: -15px;
+  transform: translate(0, -18px);
 }
 
-.google-logo {
+.baidu-logo {
   //background-color: red;
-  display: inline;
-  width: 272px;
-  height: 92px;
+  width: 270px;
   left: 50%;
-  margin-top: 200px;
+  margin-top: 30px;
   text-align: center;
 }
 
 //搜索条
-.searchbar { /*目的是设置自定义边框，比如圆角与阴影*/
-  border: rgb(218, 218, 218) solid 1px;
-  border-radius: 2em;
-  width: 583px;
-  height: 44px;
-  //box-shadow: 0px 0px 5px rgb(212, 212, 212);
+.searchnav {
+  width: 550px;
   margin: 0 auto;
   display: flex;
-  text-align: center;
+
+}
+
+.searchbar { /*目的是设置自定义边框，比如圆角与阴影*/
+  //background-color: pink;
+  border: 2px solid #c4c7ce;
+  border-right: 0;
+  border-radius: 10px 0 0 10px;
+  width: 440px;
+  height: 35px;
+  //box-shadow: 0px 0px 5px rgb(212, 212, 212);
+  //text-align: center;
 }
 
 .searchbar:hover {
-  box-shadow: 0 0 5px rgb(212, 212, 212);
+  border: 2px solid rgb(167, 170, 181);
+  border-right: 0;
 }
 
-.img-magnifier {
-  width: 27px;
-  height: 27px;
-  background-size: 100%;
-  background-image: url("../assets/放大镜图标.png");
-  margin-left: 10px;
-  margin-top: 10px;
-}
-
-.img-microphone {
-  width: 27px;
-  height: 27px;
-  background-size: 100%;
-  background-image: url("../assets/麦克风图标.png");
-  margin-left: 10px;
-  margin-top: 10px;
-}
+//.searchbar.active input{
+//  border: 2px solid rgb(70,98,217);
+//  border-right: 0;
+//}
 
 #search {
-  width: 500px;
-  height: 40px;
+  display: inline;
+  width: 400px;
+  height: 32px;
+  margin-left: 10px;
   border: none; /*取消默认的边框以设置自定义边框*/
   outline: none; /*取消浏览器默认的蓝光边框以设置自定义的输入框*/
   font-size: 16px;
   color: rgb(112, 112, 112);
-  //margin-left: 30px;
   //background-color: red;
   margin-top: 2px;
+  //background-color: pink;
 }
 
+//.img-magnifier {
+//  width: 27px;
+//  height: 27px;
+//  background-size: 100%;
+//  background-image: url("../assets/放大镜图标.png");
+//  margin-left: 10px;
+//  margin-top: 10px;
+//}
+//
+//.img-microphone {
+//  width: 27px;
+//  height: 27px;
+//  background-size: 100%;
+//  background-image: url("../assets/麦克风图标.png");
+//  margin-left: 10px;
+//  margin-top: 10px;
+//}
 
 //搜索按钮
-.bt {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center
-}
+//.bt {
+//  justify-content: center
+//}
 
 .bt-search {
-  background-color: #f8f9fa;
-  border: 1px solid #f8f9fa;
-  border-radius: 4px;
-  color: #3c4043;
+  width: 108px;
+  height: 39px;
+  background-color: #4e6ef2;
+  border-radius: 0 10px 10px 0;
+  border: none;
   font-family: arial, sans-serif;
-  font-size: 14px;
-  margin: 10px 20px;
   padding: 0 16px;
   line-height: 27px;
-  height: 36px;
   min-width: 54px;
-  cursor: pointer;
-  user-select: none;
+  //cursor: pointer;
+  //user-select: none;
+  font-size: 17px;
+  color: #fff;
 }
 
 .bt-search:hover {
-  box-shadow: 0 0 5px rgb(212, 212, 212);
+  background-color: rgb(70, 98, 217);
 }
 
 
@@ -113,22 +122,25 @@
   display: block;
 }
 
-.center {
-  //display: none;
-  margin-top: 50px;
-}
 
 .dialogue {
   display: block;
-  margin: 0;
+  margin: 0 auto;
   color: rgb(60, 63, 65);
+}
+
+.center {
+  display: flex;
+  justify-content: center
+}
+
+.bt-copy {
+  margin: 0 10px;
 }
 
 .link {
   height: 30px;
   background-color: gainsboro;
-  display: block;
-  margin: 0 auto;
   border-radius: 4px;
   border: 1px solid rgb(218, 218, 218);
 }
@@ -136,6 +148,7 @@
 .btSearchtouch {
   box-shadow: 0 0 5px rgb(212, 212, 212);
 }
+
 
 //鼠标和鼠标动画
 
@@ -156,12 +169,13 @@
 .mouseMove1 {
   animation-name: mouseMove1;
   animation-duration: 2s;
+
   animation-fill-mode: forwards;
 }
 
 .mouseMove2 {
   animation-name: mouseMove2;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 
@@ -171,19 +185,20 @@
     left: 0;
   }
   100% {
-    left: 40%;
-    margin-top: 380px;
+    left: 45%;
+    margin-top: 200px;
   }
 }
 
 @keyframes mouseMove2 {
   0% {
-    left: 40%;
-    margin-top: 380px;
-  }
-  100% {
     left: 45%;
-    margin-top: 440px;
+    margin-top: 200px;
+  }
+
+  100% {
+    left: 63.5%;
+    margin-top: 200px;
   }
 }
 
@@ -210,56 +225,69 @@ span {
 }
 
 .searchbarTouch {
-  box-shadow: 0 0 5px rgb(212, 212, 212);
+  border: 2px solid rgb(70, 98, 217);
+  border-right: 0;
 }
 
 
 //适配
 @media screen and (orientation: portrait) {
   /*竖屏 css*/
+
   #text1 {
-    transform: translate(0, 27vw);
+    transform: translate(19vw, 28vw) scale(1.5);
   }
 
   #text2 {
-    transform: translate(0, -16vw);
+    display: block;
+    transform: translate(19vw, 37vw) scale(1.5);
   }
 
-  .google-logo {
-    transform: translate(0, -16vw);
+  .baidu-logo {
+    display: block;
+    transform: translate(38vw, 20vw) scale(1.5);
   }
 
-  .searchbar{
-    width:80vw ;
-  }
-  #search {
-    width: 58vw;
-    margin-left: 2vw;
+  .searchnav {
+    transform: translate(5vw, 52vw);
   }
 
+
+  .question {
+    transform: translate(23vw, 49vw) scale(1.5);
+  }
+
+  .foot {
+    transform: translate(23vw, 49vw) scale(1.5);
+  }
+
+  div.center {
+    transform: translate(26vw, 55vw) scale(1.5);
+  }
+  @keyframes mouseMove1 {
+    0% {
+      top: 0;
+      left: 0;
+    }
+    100% {
+      left: 40%;
+      margin-top: 380px;
+    }
+  }
   @keyframes mouseMove2 {
     0% {
       left: 40%;
       margin-top: 380px;
     }
     100% {
-      left: 40%;
-      margin-top: 440px;
+      left: 120%;
+      margin-top: 380px;
     }
   }
-
+  .center {
+    transform: translate(0, -9vw)
+  }
 
 }
-
-//.backpack {
-//  transform: translate(-25vw, 70vw) scale(2);
-//}
-//.ice_bt{
-//  margin: 0;
-//}
-//.message {
-//  font-size: 1vw;
-//  transform: translate(30vw, 53vw) scale(2.5);
-//}
 
 

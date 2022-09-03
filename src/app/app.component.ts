@@ -48,12 +48,12 @@ export class AppComponent {
             }, 700);
             const l = setInterval(() => {
               this.card = '对你来说很难吗？'
-            }, 2100);
+            }, 2000);
             const n = setInterval(() => {
-              const g_url = new URL("https://www.google.com/search");
-              g_url.searchParams.set('q', this.searchval)
+              const g_url = new URL("https://www.baidu.com/s");
+              g_url.searchParams.set('wd', this.searchval)
               console.log(g_url.href)
-              window.location.href=g_url.href
+              window.location.href = g_url.href
               clearInterval(n)
             }, 3100);
           }
